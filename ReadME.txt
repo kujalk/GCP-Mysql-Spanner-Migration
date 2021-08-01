@@ -22,10 +22,12 @@ Resources created
 
 Method
 -------
-[1] terraform init
-[2] terraform plan - To check all resources which will be created
-[3] terraform apply -> Provide "yes" for confirmation
-[4] terraform destroy -> Provide "yes" for confirmation also Make sure to stop the job before applying the "terraform destroy"
+[1] Fill the values in Provider.tf and terraform.tfvars
+[2] terraform init
+[3] terraform plan - To check all resources which will be created
+[4] terraform apply -> Provide "yes" for confirmation
+[5] terraform destroy -> Provide "yes" for confirmation also Make sure to stop the job before applying the "terraform destroy"
+
 
 Extra Info
 ------------
