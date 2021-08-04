@@ -1,3 +1,15 @@
 {
-    "purpose":"testing"
-}
+    "tables": [
+      {
+        "table_name": "CountryLanguage",
+        "file_patterns": [
+          "gs://upwork-gcp-spanner/data*.csv"
+        ],
+        "columns": [
+          {"column_name": "Country", "type_name": "STRING"},
+          {"column_name": "City", "type_name": "STRING"},
+          {"column_name": "Language", "type_name": "STRING"}
+        ]
+      }
+    ]
+  }

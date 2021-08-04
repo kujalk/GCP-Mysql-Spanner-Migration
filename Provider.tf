@@ -1,4 +1,4 @@
 provider "google" {
-  credentials = "key.json"
+  credentials = "E:\\Upwork\\Upwork_GCP_MySql_Spanner\\key.json"
   project     = var.Project-ID
 }

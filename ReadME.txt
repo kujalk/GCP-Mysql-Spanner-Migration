@@ -1,4 +1,4 @@
-Purpose - To migrate MySql CSV dump to GCP Spanner via GCP dataflow
+Purpose - Terraform template to migrate CSV file to GCP Spanner via GCP dataflow
 Dataflow Template used - Cloud Storage Text to Cloud Spanner
 Developer - K.Janarthanan
 
@@ -19,6 +19,7 @@ Resources created
 [3] GCP Dataflow Job with "Cloud Storage Text to Cloud Spanner" template 
 [4] GCP Cloud Storage Bucket
 [5] Roles for accessing Bucket, Spanner 
+[6] Uploading Manifest file and CSV file
 
 Method
 -------
@@ -28,8 +29,8 @@ Method
 [4] terraform apply -> Provide "yes" for confirmation
 [5] terraform destroy -> Provide "yes" for confirmation also Make sure to stop the job before applying the "terraform destroy"
 
-
 Extra Info
 ------------
 Dataflow Template info  - https://cloud.google.com/dataflow/docs/guides/templates/provided-batch#gcloud_15
 Migration - https://cloud.google.com/architecture/migrating-mysql-to-spanner
+In any case, if Dataflow job has failed due to capacity issue in Region, retry the job by cloning the job

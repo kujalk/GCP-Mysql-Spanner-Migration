@@ -21,3 +21,14 @@ resource "google_storage_bucket_object" "manifest-file" {
   source = var.Manifest_Location
   bucket = google_storage_bucket.csv-store.name
 }
+
+resource "google_storage_bucket_object" "data-file" {
+  name   = "data.csv"
+  source = var.CSV_Location
+  bucket = google_storage_bucket.csv-store.name
+
+  depends_on = [
+    google_storage_bucket_object.manifest-file,
+    google_spanner_database.database
+  ]
+}

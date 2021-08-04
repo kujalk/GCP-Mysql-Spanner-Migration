@@ -18,9 +18,19 @@ variable "Manifest_Location" {
   description = "Manifest File Location"
 }
 
+variable "CSV_Location" {
+  type        = string
+  description = "CSV File Location"
+}
+
 variable "Member" {
   type        = string
   description = "Member for permissions"
+}
+
+variable "GCP_Service_Account" {
+  type        = string
+  description = "GCP Service Account"
 }
 
 variable "Bucket" {

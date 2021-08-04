@@ -9,4 +9,10 @@ resource "google_dataflow_job" "big_data_job" {
     databaseId     = google_spanner_database.database.name
     importManifest = "${google_storage_bucket.csv-store.url}/manifest.json"
   }
+
+  service_account_email = var.GCP_Service_Account
+
+  depends_on = [
+    google_storage_bucket_object.data-file
+  ]
 }

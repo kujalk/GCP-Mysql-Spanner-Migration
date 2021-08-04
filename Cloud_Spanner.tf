@@ -10,8 +10,11 @@ resource "google_spanner_instance" "main" {
 }
 
 resource "google_spanner_database" "database" {
-  instance            = google_spanner_instance.main.name
-  name                = "${var.Resource-Prefix}-database"
+  instance = google_spanner_instance.main.name
+  name     = "${var.Resource-Prefix}-database"
+  ddl = [
+    "CREATE TABLE  CountryLanguage (Country STRING(100) NOT NULL,City STRING(100) NOT NULL,Language STRING(100) NOT NULL) PRIMARY KEY (City)",
+  ]
   deletion_protection = false
 }
 
